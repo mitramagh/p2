@@ -45,14 +45,14 @@ public class Insect {
         return x;
     }
 
-    public void setX(int newX) {
-        if (isLegalX(newX)) {
-            x = newX;
+    public void setX(int x) {
+        if (isLegalX(x)) {
+            this.x = x;
         }
     }
 
-    public static boolean isLegalX(int newX) {
-        return (newX >= 0 ? true : false);
+    public static boolean isLegalX(int x) {
+        return (x >= 0 ? true : false);
     }
 
 
@@ -60,14 +60,14 @@ public class Insect {
         return y;
     }
 
-    public void setY(int newY) {
-        if (isLegalY(newY)) {
-            y = newY;
+    public void setY(int y) {
+        if (isLegalY(y)) {
+            this.y = y;
         }
     }
 
-    public static boolean isLegalY(int newY) {
-        return (newY >= 0 ? true : false);
+    public static boolean isLegalY(int y) {
+        return (y >= 0 ? true : false);
     }
 
     public static int getPopulation() {
@@ -103,6 +103,10 @@ public class Insect {
     public static String produceRandomFact() {
         int index = (int)(Math.random() * (((FACTS.length - 1) - 0) + 1));
         return FACTS[index];
+    }
+
+    public String toString() {
+        return "weight: " + weight + ", x: " + x + ", y: " + y;
     }
 
     public static void main(String[] args) {
