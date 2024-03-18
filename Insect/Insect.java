@@ -1,3 +1,5 @@
+import java.security.PublicKey;
+
 public class Insect {
 
     //instance variables
@@ -6,6 +8,8 @@ public class Insect {
     private int y;
 
     //static constants/variables
+    public static final int DEFAULT_X = 0;
+    public static final int DEFAULT_Y = 0;
     public static final double DIST_WEIGHT_LOSS_FACTOR = .0001;
     private static int population = 0;
     private static final String[] FACTS = {
@@ -16,12 +20,21 @@ public class Insect {
     };
 
     //constructor
-    public Insect(double initWeight, int initX, int initY ) {
-        weight = initWeight;
-        x = initX;
-        y =initY;
+    public Insect(double initWeight ) {
+        this (
+                initWeight,
+                DEFAULT_X,
+                DEFAULT_Y
+        );
+
+    }
+    public Insect(double weight, int x, int y ) {
+        this.weight = weight;
+        this.x = x;
+        this.y = y;
         population++;
     }
+
 
     //methods
     public double getWeight(){
