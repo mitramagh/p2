@@ -6,7 +6,12 @@ public class InsectClient {
         bug1.setX(320);
         System.out.println(bug1.getX());
         System.out.println(bug1.getY());
-        System.out.println(bug1.getPopulation());
+
+        Insect bug2 = new Insect(64);
+        System.out.println(bug2.getWeight());
+        System.out.println(bug2.getX());
+        System.out.println(bug2.getY());
+        System.out.println(Insect.getPopulation());
 
     }
 }
